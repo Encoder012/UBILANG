@@ -8,11 +8,7 @@
 }
 #profilecard{
 background-color: #CDD2FF;
-/* position: absolute; */
-/* width: 1130px; */
-/* height: 606px; */
-/* left: 42px; */
-/* top: 132px; */
+
 }
 
 #userImage{
@@ -25,14 +21,7 @@ background:src(public/chloeCarter.png)
 }
 
 #profileChange{
-    /* position: relative; */
-    /* width: 80px; */
-    /* height: 64px; */
-    /* left: -17px; */
-    /* justify-content: center; */
     margin:auto;
-    /* top: 30px; */
-    
     color: #809AF6;
 }    
 
