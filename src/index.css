@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#card{
+    position: absolute;
+    top: 132px;
+}
+#profilecard{
+background-color: #CDD2FF;
+/* position: absolute; */
+/* width: 1130px; */
+/* height: 606px; */
+/* left: 42px; */
+/* top: 132px; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#userImage{
+    position: absolute;
+width: 186px;
+height: 175px;
+left: 142px;
+top: 183px;
+background:src(public/chloeCarter.png)
+}
+
+#profileChange{
+    /* position: relative; */
+    /* width: 80px; */
+    /* height: 64px; */
+    /* left: -17px; */
+    /* justify-content: center; */
+    margin:auto;
+    /* top: 30px; */
+    
+    color: #809AF6;
+}    
+
+#profileChange:hover{
+    color: #7090FF;
 }
