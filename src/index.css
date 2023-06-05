@@ -28,3 +28,7 @@ background:src(public/chloeCarter.png)
 #profileChange:hover{
     color: #7090FF;
 }
+
+#voiceswapbox{
+    box-shadow: 0px 4px 4px #9B57F1;
+}
