@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Music from './components/Music';
-import Test from './components/Test';
-import Profile from './components/Profile';
-import VoiceSwap from './components/VoiceSwap';
-import LandingPage from './components/LandingPage';
+// import Music from './components/Music';
+// import Test from './components/Test';
+// import Profile from './components/Profile';
+// import VoiceSwap from './components/VoiceSwap';
+import LandingPage from './Pages/LandingPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       {/* <Test/> */}
       {/* <Profile/> */}
       {/* <VoiceSwap/> */}
-      <LandingPage/>
+      <LandingPage />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { AiOutlinePlayCircle } from 'react-icons/ai';
 import { AiOutlinePauseCircle } from 'react-icons/ai';
-import { voices } from './Voices'
+import { voices } from '../content/Voices'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function LandingPage() {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -11,6 +13,9 @@ function LandingPage() {
     }
     return (
         <div className='bg-gradient-to-r from-[#B51BFFA6] via-[#C140FF8A] to-[#f9e5ff]'>
+            <div>
+                <Navbar />
+            </div>
 
             <section className="text-gray-600 body-font">
 
@@ -294,6 +299,9 @@ function LandingPage() {
                 </div>
             </section>
 
+            <div>
+                <Footer />
+            </div>
         </div >
     )
 }
