@@ -131,9 +131,9 @@ function LandingPage() {
 
             <section className="text-gray-600 body-font">
                 <div className="container px-5 lg:py-10 py-10 mx-auto">
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap mx-auto">
                         {voices.map((voices) =>
-                            <div className="lg:p-10 p-5 lg:w-1/3" key={voices.id}>
+                            <div className="lg:p-10 p-5 lg:w-1/3 mx-auto" key={voices.id}>
                                 <div style={{ backgroundColor: voices.bgColor, borderColor: voices.borderColor }} className="h-full lg:mx-10 mx-0 pt-5 rounded-lg overflow-hidden border-2 text-center relative hover:border-[#620058]">
                                     <div className='mx-auto items-center'>
                                         <img className='w-[90%] h-auto mx-auto' src={voices.imgUrl} alt='voice' />
@@ -154,29 +154,32 @@ function LandingPage() {
                         )}
                     </div>
 
-                    <h2 className='w-full mx-auto text-center font- lg:my-20 my-10 text-[#4F0047] lg:text-7xl text-5xl'>
-                        Snap of Studio
-                    </h2>
-                    <div className='w-full h-[50vh] lg:my-20 my-10'>
+                    <div className='my-20'>
+                        <h2 className='w-full mx-auto text-center font- lg:my-20 my-10 text-[#4F0047] lg:text-7xl text-5xl'>
+                            Snap of Studio
+                        </h2>
+                        <div className='w-full h-[50vh] lg:my-20 my-20'>
 
-                        <div className='w-full h-[50vh]'>
-                            <div className='lg:flex hidden relative rounded-lg w-full mx-auto my-auto top-[35%] h-[25%] overflow-hidden bg-[#F87CFF]'></div>
-                            <div className='lg:absolute lg:flex lg:left-[10%]'>
-                                <img className=' w-fit lg:mx-5 lg:-mt-20 my-5' src='ss1.png' alt='snap' />
-                                <img className=' w-fit lg:mx-5 lg:-mt-20 my-5' src='ss2.png' alt='snap' />
+                            <div className='w-full h-[50vh]'>
+                                <div className='lg:flex hidden relative rounded-lg w-full mx-auto my-auto top-[35%] h-[25%] overflow-hidden bg-[#F87CFF]'></div>
+                                <div className='lg:absolute lg:flex lg:left-[10%]'>
+                                    <img className=' w-fit lg:mx-5 lg:-mt-20 my-5' src='ss1.png' alt='snap' />
+                                    <img className=' w-fit lg:mx-5 lg:-mt-20 my-5' src='ss2.png' alt='snap' />
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <button className="flex mx-auto text-black font-semibold bg-[#D301A8] border-0 py-2 my-20 px-8 focus:outline-none hover:bg-[#F87CFF] rounded-xl text-lg">
-                        Unlock Studio
-                    </button>
-
-
                 </div>
             </section>
+
+            {/* <div className='my-10'> */}
+            <button className="flex mx-auto text-black font-semibold bg-[#D301A8] border-0 py-2 lg:my-10 my-10 px-8 focus:outline-none hover:bg-[#F87CFF] rounded-xl text-lg">
+                Unlock Studio
+            </button>
+            {/* </div> */}
+
             <section className="text-gray-600 body-font">
-                <div className="container px-5 lg:py-24 py-5 mx-auto">
+                <div className="container px-5 lg:py-24 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4 text-center">
                         <div className="p-4 sm:w-1/4 w-1/2">
                             <h2 className="title-font font-medium sm:text-6xl text-3xl pb-5 text-[#620058]">1000+</h2>
@@ -199,7 +202,7 @@ function LandingPage() {
             </section>
 
             <div className='my-20'>
-                <h2 className='w-full mx-auto text-center text-5xl'>
+                <h2 className='w-full mx-auto text-center lg:text-5xl text-4xl'>
                     Discover Videos Created Using Ubilang
                 </h2>
                 <Carousel />
@@ -271,7 +274,7 @@ function LandingPage() {
                     </div>
                 </div>
             </section  >
-            <h2 style={{ background: "linear-gradient(90deg, #4F0047 36.72%, rgba(98, 0, 88, 0) 126.59%)", WebkitBackgroundClip: 'text', WebkitTextFillColor: "transparent" }} className='lg:w-[75%] mx-auto my-20 text-center lg:text-5xl text-2xl'>
+            <h2 style={{ background: "linear-gradient(90deg, #4F0047 36.72%, rgba(98, 0, 88, 0) 126.59%)", WebkitBackgroundClip: 'text', WebkitTextFillColor: "transparent" }} className='lg:w-[75%] mx-auto lg:my-20 my-5 text-center lg:text-5xl text-2xl'>
                 Ubilang has been developed and hosted on GCP Cloud, with a focus on high availability and redundancy...
             </h2>
 
