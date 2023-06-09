@@ -83,7 +83,7 @@ function LandingPage() {
 
 
 
-            <div className='w-full mx-auto my-20'>
+            <div className='w-full mx-auto my-40'>
                 <h2 className='w-full mx-auto text-center font- my-20 text-[#4F0047] lg:text-7xl text-3xl'>
                     Ubilang Product Demo
                 </h2>
@@ -102,7 +102,7 @@ function LandingPage() {
 
             <div className='w-full my-10'>
                 <h2 className='lg:w-[60%] w-[100%] mx-auto text-center lg:text-6xl text-3xl font-semibold'>Authentic Human Voices, Powered by AI</h2>
-                <p className='lg:w-[70%] w-[100%] my-10 mx-auto text-center text-base font-semibold'>Effortless Studio-Quality Voice Overs in Seconds: Create Professional Narrations in Minutes. Ubilang: Your AI Voice Partner for Podcasts, Videos, and Professional Presentations</p>
+                <p className='lg:w-[70%] w-[95%] my-10 mx-auto text-center text-base font-semibold'>Effortless Studio-Quality Voice Overs in Seconds: Create Professional Narrations in Minutes. Ubilang: Your AI Voice Partner for Podcasts, Videos, and Professional Presentations</p>
 
                 <div className="container mx-auto flex px-5 py-10 md:flex-row flex-col items-center">
 
@@ -122,10 +122,10 @@ function LandingPage() {
                     </div>
                 </div>
 
-                <h2 className='w-full mx-auto text-center lg:text-5xl text-3xl'>
+                <h2 className='w-full mx-auto mt-40 text-center lg:text-5xl text-3xl'>
                     Unlock the perfect voice for every creator.
                 </h2>
-                <p className='w-[70%] my-10 mx-auto text-center text-2xl font-light'> No matter if you're in the creative, corporate, or entertainment industry, Ubilang provides the ideal voice to bring your projects to life.</p>
+                <p className='lg:w-[70%] w-[95%] my-10 mx-auto text-center lg:text-2xl text-lg font-light'> No matter if you're in the creative, corporate, or entertainment industry, Ubilang provides the ideal voice to bring your projects to life.</p>
             </div>
 
 
@@ -154,7 +154,7 @@ function LandingPage() {
                         )}
                     </div>
 
-                    <div className='my-20'>
+                    <div className='my-40'>
                         <h2 className='w-full mx-auto text-center font- lg:my-20 my-10 text-[#4F0047] lg:text-7xl text-5xl'>
                             Snap of Studio
                         </h2>
@@ -209,7 +209,7 @@ function LandingPage() {
             </div>
 
             <div>
-                <h2 style={{ background: "linear-gradient(90deg, #4F0047 36.72%, rgba(98, 0, 88, 0) 126.59%)", WebkitBackgroundClip: 'text', WebkitTextFillColor: "transparent" }} className='w-full mx-auto text-center lg:text-7xl text-3xl'>
+                <h2 style={{ background: "linear-gradient(90deg, #4F0047 36.72%, rgba(98, 0, 88, 0) 126.59%)", WebkitBackgroundClip: 'text', WebkitTextFillColor: "transparent" }} className='w-full mx-auto mt-40 text-center lg:text-7xl text-3xl'>
                     Unleash Your Creativity
                 </h2>
 
