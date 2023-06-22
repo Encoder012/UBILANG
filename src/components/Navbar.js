@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const { loginWithRedirect } = useAuth0();
+    const { logout } = useAuth0();
+    const { user, isAuthenticated, isLoading } = useAuth0();
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -24,7 +28,14 @@ const Navbar = () => {
                             <a href="/" className="text-white hover:bg-white hover:text-[#620058] px-4 py-2 rounded-md text-sm font-semibold">Users</a>
                             <a href="/" className="text-white hover:bg-white hover:text-[#620058] px-4 py-2 rounded-md text-sm font-semibold">About</a>
                             <div className='ml-auto'>
-                                <a href="/" className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold">Get Started</a>
+                                {
+                                    isAuthenticated ?
+                                        <button className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                                            Log Out
+                                        </button> : <button className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold" onClick={() => loginWithRedirect()}>Get Started</button>
+                                }
+
+
                                 <a href="/" className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold">Contact us</a>
                             </div>
                         </div>
@@ -45,7 +56,12 @@ const Navbar = () => {
                         <a href="/" className="text-white hover:bg-white hover:text-[#620058] block px-3 py-2 rounded-md text-base font-semibold">Demo</a>
                         <a href="/" className="text-white hover:bg-white hover:text-[#620058] block px-3 py-2 rounded-md text-base font-semibold">Users</a>
                         <a href="/" className="text-white hover:bg-white hover:text-[#620058] block px-3 py-2 rounded-md text-base font-semibold">About</a>
-                        <a href="/" className="text-white hover:bg-white hover:text-[#620058] block px-3 py-2 rounded-md text-base font-semibold">Get Started</a>
+                        {
+                            isAuthenticated ?
+                                <button className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                                    Log Out
+                                </button> : <button className="text-[#620058] hover:bg-[#620058] hover:text-white px-3 py-2 rounded-md text-sm font-semibold" onClick={() => loginWithRedirect()}>Get Started</button>
+                        }
                         <a href="/" className="text-white hover:bg-white hover:text-[#620058] block px-3 py-2 rounded-md text-base font-semibold">Contact us</a>
 
 
