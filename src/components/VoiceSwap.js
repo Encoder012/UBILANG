@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { RiVoiceprintFill } from "react-icons/ri";
 
 function VoiceSwap() {
-    const speechToTextURL = "http://localhost:8000/api/speechToText/";
+    const speechToTextURL = "https://modelverse.in/speech/api/speechToText/"; //change this url
     const [dragActive, setDragActive] = useState(false);
     const inputRef = useRef(null);
     const [file, setFile] = useState(null);
@@ -91,6 +91,21 @@ function VoiceSwap() {
         // }
     };
 
+    const genDownloadLink = (e) => {
+        const subFileName = "subtitles";
+        const subtitleData = JSON.parse(fileResponse);
+        const encodedSubtitle = encodeURIComponent(subtitleData.subtitles);
+        console.log(encodedSubtitle);
+        const downloadButton = document.getElementById("download-button");
+        console.log(downloadButton);
+        downloadButton.setAttribute(
+            "href",
+            `data:text/plain;charset=utf-8,${encodedSubtitle}`
+        );
+        downloadButton.setAttribute("download", `${subFileName}.srt`);
+        downloadButton.style.display = "block";
+    };
+
     return (
         <div>
             <section className="text-gray-600 w-[100%] body-font overflow-hidden">
@@ -171,15 +186,31 @@ function VoiceSwap() {
                                             ></div>
                                         )}
                                     </form>
-                                    <div
-                                        className={
-                                            fileResponse
-                                                ? "w-fit mx-auto mt-[2%]"
-                                                : "hidden"
-                                        }
-                                    >
-                                        response: {fileResponse}
-                                    </div>
+                                    {fileResponse ? (
+                                        <div
+                                            className={
+                                                "w-fit block mx-auto mt-[2%] overflow-scroll"
+                                            }
+                                        >
+                                            response:
+                                            <a
+                                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                                href="/"
+                                                onClick={genDownloadLink}
+                                                id="download-button"
+                                            >
+                                                Download Subtitles
+                                            </a>
+                                            <br />
+                                            <pre>
+                                                {JSON.parse(
+                                                    fileResponse
+                                                ).subtitles.join(" \n")}
+                                            </pre>
+                                        </div>
+                                    ) : (
+                                        ""
+                                    )}
                                 </div>
                             </div>
                         </div>
