@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { RiVoiceprintFill } from "react-icons/ri";
+import { AiOutlineDownload } from "react-icons/ai";
 
 function VoiceSwap() {
     const speechToTextURL = "https://modelverse.in/speech/api/speechToText/"; //change this url
@@ -194,12 +195,11 @@ function VoiceSwap() {
                                         >
                                             response:
                                             <a
-                                                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                                                 href="/"
                                                 onClick={genDownloadLink}
                                                 id="download-button"
                                             >
-                                                Download Subtitles
+                                                <AiOutlineDownload />
                                             </a>
                                             <br />
                                             <pre>
